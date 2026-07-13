@@ -1,0 +1,18 @@
+[workspace]
+authors = ["Tanmay Sah <tradertanmay@gmail.com>"]
+channels = ["conda-forge", "bioconda"]
+name = "my-project"
+platforms = ["osx-arm64", "win-64", "osx-64", "linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = ">=3.13.5,<3.15"
+scipy = ">=1.18.0,<2"
+numpy = "<2.5"
+fastqc = { version = ">=0.12.1,<0.13", channel = "bioconda" }
+
+[pypi-dependencies]
+pandas = ">=3.0.3, <4"
+pytest = { git = "https://github.com/pytest-dev/pytest" }
